@@ -55,7 +55,7 @@ public class HelloTVXlet extends Thread implements Xlet, UserEventListener{
         scene.setBackground(Color.BLACK);
         scene.setBackgroundMode(HVisible.BACKGROUND_FILL);
         
-        timer.scheduleAtFixedRate(publisher, 0, 10);
+        timer.scheduleAtFixedRate(publisher, 0, 30);
         
 
         

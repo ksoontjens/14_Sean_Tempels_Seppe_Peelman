@@ -25,7 +25,7 @@ public class Paddle extends HComponent implements ObserverInterface, UserEventLi
     Color kleur;
     public int score;
     public boolean p2DirIsUp = true;
-    int speed = 20;
+    int speed = 10;
     
     public Paddle(int paddleNum)
     {
@@ -39,7 +39,7 @@ public class Paddle extends HComponent implements ObserverInterface, UserEventLi
         {
             this.x = HelloTVXlet.scene.getWidth() - this.width;
             kleur=Color.WHITE;
-            speed = 1;
+            speed = 3;
         }
 
         this.y = HelloTVXlet.scene.getHeight()/2 - this.height/2;

@@ -52,22 +52,22 @@ public class Ball extends HComponent implements ObserverInterface {
                 if(this.motionY < 0)
                 {
                     this.y = 0;
-                    this.motionY = 1 * speed;
+                    this.motionY = 3 * speed;
                 }
                 else
                 {
                     this.y = HelloTVXlet.scene.getHeight()-this.height;
-                    this.motionY = -1 * speed;
+                    this.motionY = -3 * speed;
                 }
             }
             if(checkCol(HelloTVXlet.p1) == 1)
             {
-                this.motionX = 1 + (amountOfHits/5);
+                this.motionX = 3 + (amountOfHits/5);
                 amountOfHits++;
             }
             else if(checkCol(HelloTVXlet.p2) == 1)
             {
-                this.motionX = -1 - (amountOfHits/5);
+                this.motionX = -3 - (amountOfHits/5);
                 amountOfHits++;
             }
             if(checkCol(HelloTVXlet.p1) == 2)
@@ -87,7 +87,7 @@ public class Ball extends HComponent implements ObserverInterface {
             
             HelloTVXlet.scene.repaint();
             
-            if(this.x > HelloTVXlet.scene.getWidth()/2 - 100)
+            if(this.x > HelloTVXlet.scene.getWidth()/2 - 200)
             {
                 ballOnRightSide = true;
             }
@@ -125,15 +125,15 @@ public class Ball extends HComponent implements ObserverInterface {
         
         if(motionY == 0)
         {
-            motionY = 1;
+            motionY = 3;
         }
         if(rnd.nextBoolean())
         {
-            motionX = 1;
+            motionX = 3;
         }
         else
         {
-            motionX = -1;
+            motionX = -3;
         }
         HelloTVXlet.scene.repaint();
     }
